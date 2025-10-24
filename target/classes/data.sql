@@ -1,0 +1,47 @@
+-- Insert workflow metadata for FO Challenge Workflow (ID: 101)
+INSERT INTO WORKFLOW_METADATA (WORKFLOW_ID, STEP_CODE, STEP_NAME, ROLE, ACTIONS_ALLOWED, NEXT_STEP_ON_SUBMIT, NEXT_STEP_ON_APPROVE, NEXT_STEP_ON_REJECT, DESCRIPTION) VALUES (101, 'STEP1', 'FO Raises Challenge', 'FO_OWNER', 'SUBMIT', 'STEP2,STEP3', NULL, NULL, 'FO owner raises a challenge for exception and can submit either to FO Business or Reg Policy for review');
+
+INSERT INTO WORKFLOW_METADATA (WORKFLOW_ID, STEP_CODE, STEP_NAME, ROLE, ACTIONS_ALLOWED, NEXT_STEP_ON_SUBMIT, NEXT_STEP_ON_APPROVE, NEXT_STEP_ON_REJECT, DESCRIPTION) VALUES (101, 'STEP2', 'FO Business Review', 'FO_BUSINESS', 'APPROVE, REJECT', NULL, 'STEP4', 'STEP3', 'FO Business reviews the challenge and either approves (goes to FO Owner) or rejects (goes to Reg Policy)');
+
+INSERT INTO WORKFLOW_METADATA (WORKFLOW_ID, STEP_CODE, STEP_NAME, ROLE, ACTIONS_ALLOWED, NEXT_STEP_ON_SUBMIT, NEXT_STEP_ON_APPROVE, NEXT_STEP_ON_REJECT, DESCRIPTION) VALUES (101, 'STEP3', 'Reg Policy Hypothesis Review', 'REG_POLICY', 'APPROVE, REJECT', NULL, 'STEP4', 'END', 'Reg Policy reviews rejected or escalated challenges and closes workflow on rejection');
+
+INSERT INTO WORKFLOW_METADATA (WORKFLOW_ID, STEP_CODE, STEP_NAME, ROLE, ACTIONS_ALLOWED, NEXT_STEP_ON_SUBMIT, NEXT_STEP_ON_APPROVE, NEXT_STEP_ON_REJECT, DESCRIPTION) VALUES (101, 'STEP4', 'FO Owner Final Confirmation', 'FO_OWNER', 'CLOSE', NULL, 'END', 'END', 'FO Owner confirms resolution and closes the challenge workflow');
+
+-- Insert SLA configuration for workflow steps
+INSERT INTO WORKFLOW_SLA_CONFIG (WORKFLOW_ID, STEP_CODE, SLA_HOURS, EMAIL_TEMPLATE_ID, TRIGGER_ON) VALUES (101, 'STEP1', 24, 201, 'ON_CREATE');
+
+INSERT INTO WORKFLOW_SLA_CONFIG (WORKFLOW_ID, STEP_CODE, SLA_HOURS, EMAIL_TEMPLATE_ID, TRIGGER_ON) VALUES (101, 'STEP2', 12, 202, 'ON_ASSIGN');
+
+INSERT INTO WORKFLOW_SLA_CONFIG (WORKFLOW_ID, STEP_CODE, SLA_HOURS, EMAIL_TEMPLATE_ID, TRIGGER_ON) VALUES (101, 'STEP3', 8, 203, 'ON_STATUS_CHANGE');
+
+INSERT INTO WORKFLOW_SLA_CONFIG (WORKFLOW_ID, STEP_CODE, SLA_HOURS, EMAIL_TEMPLATE_ID, TRIGGER_ON) VALUES (101, 'STEP4', 8, 204, 'ON_STATUS_CHANGE');
+
+-- Insert exception access (role assignments)
+INSERT INTO EXCEPTION_ACCESS (EXCEPTION_ACCESS_ID, ROLE, BRID, PRODUCT_AREA, BUSINESS_AREA) VALUES (101, 'FO_OWNER', 'BR12345', 'EQ', 'APAC');
+
+INSERT INTO EXCEPTION_ACCESS (EXCEPTION_ACCESS_ID, ROLE, BRID, PRODUCT_AREA, BUSINESS_AREA) VALUES (102, 'FO_BUSINESS', 'BR56789', 'EQ', 'APAC');
+
+INSERT INTO EXCEPTION_ACCESS (EXCEPTION_ACCESS_ID, ROLE, BRID, PRODUCT_AREA, BUSINESS_AREA) VALUES (103, 'REG_POLICY', 'BR98765', 'EQ', 'APAC');
+
+-- Insert user information
+INSERT INTO USER_INFO (USER_ID, BRID, DISPLAY_NAME, EMAIL_ID, TYPE, IS_ACTIVE, CREATED_AT, UPDATED_AT) VALUES ('USER001', 'BR12345', 'John Smith', 'john.smith@company.com', 'EMPLOYEE', 1, '2024-01-01 00:00:00', '2024-01-01 00:00:00');
+
+INSERT INTO USER_INFO (USER_ID, BRID, DISPLAY_NAME, EMAIL_ID, TYPE, IS_ACTIVE, CREATED_AT, UPDATED_AT) VALUES ('USER002', 'BR56789', 'Jane Doe', 'jane.doe@company.com', 'EMPLOYEE', 1, '2024-01-01 00:00:00', '2024-01-01 00:00:00');
+
+INSERT INTO USER_INFO (USER_ID, BRID, DISPLAY_NAME, EMAIL_ID, TYPE, IS_ACTIVE, CREATED_AT, UPDATED_AT) VALUES ('USER003', 'BR98765', 'Mike Johnson', 'mike.johnson@company.com', 'EMPLOYEE', 1, '2024-01-01 00:00:00', '2024-01-01 00:00:00');
+
+-- Insert user role mappings
+INSERT INTO USER_INFO_TYPE (BRID, ROLE) VALUES ('BR12345', 'FO_OWNER');
+
+INSERT INTO USER_INFO_TYPE (BRID, ROLE) VALUES ('BR56789', 'FO_BUSINESS');
+
+INSERT INTO USER_INFO_TYPE (BRID, ROLE) VALUES ('BR98765', 'REG_POLICY');
+
+-- Insert email templates
+INSERT INTO EMAIL_TEMPLATE (TEMPLATE_ID, TEMPLATE_NAME, SUBJECT, BODY) VALUES (201, 'FO Challenge Created', 'New FO Challenge Created - {EXCEPTION_ID}', 'Dear {USER_NAME},\n\nA new FO challenge has been created for exception {EXCEPTION_ID}.\n\nCurrent Step: {CURRENT_STEP}\nSLA Deadline: {SLA_DEADLINE}\n\nPlease log in to take action.\n\nBest regards,\nWorkflow System');
+
+INSERT INTO EMAIL_TEMPLATE (TEMPLATE_ID, TEMPLATE_NAME, SUBJECT, BODY) VALUES (202, 'FO Business Review Assigned', 'Action Required: FO Business Review - {EXCEPTION_ID}', 'Dear {USER_NAME},\n\nA challenge requires your review for exception {EXCEPTION_ID}.\n\nCurrent Step: {CURRENT_STEP}\nSLA Deadline: {SLA_DEADLINE}\n\nPlease review and take action.\n\nBest regards,\nWorkflow System');
+
+INSERT INTO EMAIL_TEMPLATE (TEMPLATE_ID, TEMPLATE_NAME, SUBJECT, BODY) VALUES (203, 'Reg Policy Review Assigned', 'Action Required: Reg Policy Review - {EXCEPTION_ID}', 'Dear {USER_NAME},\n\nA challenge requires regulatory policy review for exception {EXCEPTION_ID}.\n\nCurrent Step: {CURRENT_STEP}\nSLA Deadline: {SLA_DEADLINE}\n\nPlease review and take action.\n\nBest regards,\nWorkflow System');
+
+INSERT INTO EMAIL_TEMPLATE (TEMPLATE_ID, TEMPLATE_NAME, SUBJECT, BODY) VALUES (204, 'FO Owner Final Action', 'Action Required: Final Confirmation - {EXCEPTION_ID}', 'Dear {USER_NAME},\n\nA challenge requires your final confirmation for exception {EXCEPTION_ID}.\n\nCurrent Step: {CURRENT_STEP}\nSLA Deadline: {SLA_DEADLINE}\n\nPlease review and close the workflow.\n\nBest regards,\nWorkflow System');

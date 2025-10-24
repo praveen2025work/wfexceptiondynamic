@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Workflow API Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+        }
+        .use-case {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #e74c3c;
+        }
+        .api-endpoint {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .method {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+        .get { background-color: #28a745; }
+        .post { background-color: #007bff; }
+        .put { background-color: #ffc107; color: #000; }
+        .delete { background-color: #dc3545; }
+        .response-example {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .workflow-diagram {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .step {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #e74c3c;
+            margin: 0 10px;
+        }
+        .role {
+            background: #e67e22;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .action {
+            background: #27ae60;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .ui-integration {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .code-block {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Exception Workflow API Documentation</h1>
+        
+        <div class="use-case">
+            <h2>📋 Use Case Overview</h2>
+            <p><strong>FO Challenge Workflow:</strong> A generic workflow engine that manages exception challenges through multiple approval stages. The system supports role-based access control and dynamic workflow transitions based on metadata configuration.</p>
+            
+            <h3>🎯 Business Scenario</h3>
+            <p>When a Front Office (FO) owner raises a challenge for an exception, the system automatically routes it through different approval stages:</p>
+            <ul>
+                <li><strong>FO Owner</strong> initiates the challenge</li>
+                <li><strong>FO Business</strong> reviews and can approve/reject</li>
+                <li><strong>Reg Policy</strong> handles escalated cases</li>
+                <li><strong>Final Confirmation</strong> closes the workflow</li>
+            </ul>
+        </div>
+
+        <div class="workflow-diagram">
+            <h3>🔄 Workflow Flow Diagram</h3>
+            <div>
+                <span class="step">STEP1: FO Raises Challenge <span class="role">FO_OWNER</span></span>
+                <span class="arrow">→</span>
+                <span class="step">STEP2: FO Business Review <span class="role">FO_BUSINESS</span></span>
+                <span class="arrow">→</span>
+                <span class="step">STEP4: Final Confirmation <span class="role">FO_OWNER</span></span>
+            </div>
+            <div style="margin-top: 20px;">
+                <span class="step">STEP3: Reg Policy Review <span class="role">REG_POLICY</span></span>
+                <span class="arrow">↗</span>
+            </div>
+            <p><em>Alternative path: STEP2 → STEP3 (if rejected) → STEP4</em></p>
+        </div>
+
+        <h2>🏗️ System Architecture</h2>
+        <div class="highlight">
+            <h3>Core Components</h3>
+            <ul>
+                <li><strong>Generic Workflow Controller:</strong> Single controller handling all workflow operations</li>
+                <li><strong>Metadata-Driven:</strong> Workflow behavior defined by database metadata</li>
+                <li><strong>Role-Based Access:</strong> Users see different actions based on their roles</li>
+                <li><strong>Dynamic Transitions:</strong> Next steps determined by current action and metadata</li>
+            </ul>
+        </div>
+
+        <h2>📊 Database Schema</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Table</th>
+                    <th>Purpose</th>
+                    <th>Key Fields</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>WORKFLOW_METADATA</code></td>
+                    <td>Defines workflow steps and transitions</td>
+                    <td>workflow_id, step_code, role, actions_allowed, next_step_*</td>
+                </tr>
+                <tr>
+                    <td><code>WORKFLOW_INSTANCE</code></td>
+                    <td>Tracks active workflow instances</td>
+                    <td>instance_id, exception_id, current_step, status</td>
+                </tr>
+                <tr>
+                    <td><code>EXCEPTION_ACCESS</code></td>
+                    <td>User role assignments</td>
+                    <td>role, brid, product_area, business_area</td>
+                </tr>
+                <tr>
+                    <td><code>WORKFLOW_ACTION_HISTORY</code></td>
+                    <td>Audit trail of all actions</td>
+                    <td>instance_id, action, comments, timestamp</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>🔌 API Endpoints</h2>
+
+        <h3>🎯 Core Workflow Operations</h3>
+        
+        <div class="api-endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/workflow/start</strong>
+            <p>Start a new workflow instance for an exception</p>
+            <div class="code-block">
+{
+  "exceptionId": "EXC_20251022001",
+  "workflowId": 101,
+  "stepCode": "STEP1",
+  "comments": "Initial challenge raised"
+}
+            </div>
+        </div>
+
+        <div class="api-endpoint">
+            <span class="method post">POST</span>
+            <strong>/api/workflow/transition</strong>
+            <p>Transition workflow to next step based on action</p>
+            <div class="code-block">
+{
+  "exceptionId": "EXC_20251022001",
+  "action": "SUBMIT",
+  "comments": "Submitted for review"
+}
+            </div>
+        </div>
+
+        <div class="api-endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/workflow/status/{exceptionId}</strong>
+            <p>Get current status of workflow for an exception</p>
+        </div>
+
+        <h3>🎨 UI Integration Endpoints</h3>
+
+        <div class="api-endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/workflow/exists/{exceptionId}</strong>
+            <p>Check if workflow exists for an exception</p>
+            <div class="response-example">
+{
+  "exists": true,
+  "instanceCount": 1,
+  "lastStatus": "IN_PROGRESS"
+}
+            </div>
+        </div>
+
+        <div class="api-endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/workflow/actions/{exceptionId}?userRole=FO_OWNER</strong>
+            <p>Get available actions for current user based on role</p>
+            <div class="response-example">
+{
+  "hasActiveWorkflow": true,
+  "currentStatus": "IN_PROGRESS",
+  "availableActions": ["SUBMIT"],
+  "currentStep": "STEP1",
+  "currentRole": "FO_OWNER"
+}
+            </div>
+        </div>
+
+        <div class="api-endpoint">
+            <span class="method get">GET</span>
+            <strong>/api/workflow/metadata-enhanced/{workflowId}</strong>
+            <p>Get workflow metadata with parsed arrays for UI dropdowns</p>
+            <div class="response-example">
+[
+  {
+    "workflowId": 101,
+    "stepCode": "STEP1",
+    "stepName": "FO Raises Challenge",
+    "role": "FO_OWNER",
+    "actionsAllowed": ["SUBMIT"],
+    "nextStepOnSubmit": ["STEP2", "STEP3"],
+    "nextStepOnApprove": [],
+    "nextStepOnReject": [],
+    "description": "FO owner raises a challenge..."
+  }
+]
+            </div>
+        </div>
+
+        <div class="ui-integration">
+            <h2>🎨 UI Integration Guide</h2>
+            
+            <h3>1. Check Workflow State</h3>
+            <div class="code-block">
+// Check if workflow exists
+const workflowExists = await fetch('/api/workflow/exists/EXC_20251022001');
+const exists = await workflowExists.json();
+
+if (!exists.exists) {
+  showStartWorkflowButton();
+}
+            </div>
+
+            <h3>2. Get User Actions</h3>
+            <div class="code-block">
+// Get available actions for current user
+const actions = await fetch('/api/workflow/actions/EXC_20251022001?userRole=FO_OWNER');
+const userActions = await actions.json();
+
+if (userActions.availableActions.includes("VIEW")) {
+  showViewOnlyMode();
+} else {
+  showActionButtons(userActions.availableActions);
+}
+            </div>
+
+            <h3>3. Get Enhanced Metadata</h3>
+            <div class="code-block">
+// Get metadata with arrays for dropdowns
+const metadata = await fetch('/api/workflow/metadata-enhanced/101');
+const workflowMetadata = await metadata.json();
+
+// Populate dropdowns with arrays
+workflowMetadata.forEach(step => {
+  step.actionsAllowed.forEach(action => {
+    createActionButton(action);
+  });
+  
+  step.nextStepOnSubmit.forEach(nextStep => {
+    addDropdownOption(nextStep);
+  });
+});
+            </div>
+
+            <h3>4. Handle Multiple Next Steps</h3>
+            <div class="code-block">
+// Handle multiple possible next steps
+if (metadata.nextStepOnSubmit.length > 1) {
+  showStepSelectionDropdown(metadata.nextStepOnSubmit);
+} else if (metadata.nextStepOnSubmit.length === 1) {
+  autoProceedToStep(metadata.nextStepOnSubmit[0]);
+}
+            </div>
+        </div>
+
+        <h2>🔄 Complete Workflow Example</h2>
+        
+        <h3>Step 1: Start Workflow</h3>
+        <div class="code-block">
+curl -X POST http://localhost:8080/api/workflow/start \
+  -H "Content-Type: application/json" \
+  -d '{
+    "exceptionId": "EXC_20251022001",
+    "workflowId": 101,
+    "stepCode": "STEP1",
+    "comments": "Initial challenge raised"
+  }'
+        </div>
+
+        <h3>Step 2: Check Available Actions</h3>
+        <div class="code-block">
+curl "http://localhost:8080/api/workflow/actions/EXC_20251022001?userRole=FO_OWNER"
+// Response: {"availableActions": ["SUBMIT"], "currentStep": "STEP1"}
+        </div>
+
+        <h3>Step 3: Transition Workflow</h3>
+        <div class="code-block">
+curl -X POST http://localhost:8080/api/workflow/transition \
+  -H "Content-Type: application/json" \
+  -d '{
+    "exceptionId": "EXC_20251022001",
+    "action": "SUBMIT",
+    "comments": "Submitted for review"
+  }'
+        </div>
+
+        <h3>Step 4: Check New Status</h3>
+        <div class="code-block">
+curl "http://localhost:8080/api/workflow/actions/EXC_20251022001?userRole=FO_BUSINESS"
+// Response: {"availableActions": ["APPROVE", "REJECT"], "currentStep": "STEP2"}
+        </div>
+
+        <h2>🎯 Key Features for Developers</h2>
+        
+        <div class="highlight">
+            <h3>✅ Role-Based Access Control</h3>
+            <ul>
+                <li>Users only see actions they can perform</li>
+                <li>Wrong role users get "VIEW" only mode</li>
+                <li>Automatic role validation based on current step</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h3>✅ Dynamic Workflow Transitions</h3>
+            <ul>
+                <li>Next steps determined by metadata configuration</li>
+                <li>Support for multiple possible next steps</li>
+                <li>Automatic role assignment for next step</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h3>✅ UI-Ready Data Format</h3>
+            <ul>
+                <li>Comma-separated strings parsed into arrays</li>
+                <li>Null values converted to empty arrays</li>
+                <li>Ready for dropdown population and button generation</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Getting Started</h2>
+        
+        <h3>1. Initialize Data</h3>
+        <div class="code-block">
+curl -X POST http://localhost:8080/api/workflow/init-data
+        </div>
+
+        <h3>2. Access Swagger UI</h3>
+        <div class="code-block">
+http://localhost:8080/swagger-ui.html
+        </div>
+
+        <h3>3. Test Workflow</h3>
+        <div class="code-block">
+# Check if workflow exists
+curl http://localhost:8080/api/workflow/exists/EXC_20251022001
+
+# Get enhanced metadata
+curl http://localhost:8080/api/workflow/metadata-enhanced/101
+
+# Get user actions
+curl "http://localhost:8080/api/workflow/actions/EXC_20251022001?userRole=FO_OWNER"
+        </div>
+
+        <h2>📝 Development Notes</h2>
+        
+        <div class="use-case">
+            <h3>🔧 Configuration</h3>
+            <ul>
+                <li><strong>Database:</strong> H2 in-memory database for development</li>
+                <li><strong>Port:</strong> 8080 (configurable in application-local.yml)</li>
+                <li><strong>Data Initialization:</strong> Manual via /init-data endpoint</li>
+                <li><strong>Java Version:</strong> 21 (required for compilation and runtime)</li>
+            </ul>
+        </div>
+
+        <div class="use-case">
+            <h3>🐛 Common Issues</h3>
+            <ul>
+                <li><strong>Java Version Mismatch:</strong> Ensure Java 21 is used for both compilation and runtime</li>
+                <li><strong>Port Already in Use:</strong> Kill existing processes with <code>kill $(lsof -t -i:8080)</code></li>
+                <li><strong>Data Not Loading:</strong> Use manual initialization via /init-data endpoint</li>
+                <li><strong>Wrong Endpoint:</strong> Use /metadata-enhanced/ for arrays, not /metadata/</li>
+            </ul>
+        </div>
+
+        <h2>📞 Support</h2>
+        <p>For questions or issues, refer to:</p>
+        <ul>
+            <li>Swagger UI: <code>http://localhost:8080/swagger-ui.html</code></li>
+            <li>Application Logs: Check console output for detailed error messages</li>
+            <li>Database Console: <code>http://localhost:8080/h2-console</code> (if enabled)</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #ecf0f1; border-radius: 8px;">
+            <h3>🎉 Happy Coding!</h3>
+            <p>This workflow engine provides a flexible, metadata-driven approach to managing complex approval processes. The generic design allows for easy extension to other workflow types beyond FO challenges.</p>
+        </div>
+    </div>
+</body>
+</html>

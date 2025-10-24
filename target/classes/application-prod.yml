@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@${DB_HOST:prod-db-server}:${DB_PORT:1521}:${DB_SID:PROD}
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: ${DB_USERNAME:exception_workflow_prod}
+    password: ${DB_PASSWORD:prod_password}
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        format_sql: false
+        envers:
+          store_data_at_delete: true
+          audit_table_suffix: _AUD
+
+server:
+  port: 8080

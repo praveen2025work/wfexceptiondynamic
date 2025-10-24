@@ -1,0 +1,1393 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m              [2m (v3.2.0)[0;39m
+
+[2m2025-10-23T22:05:12.745-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.e.ExceptionWorkflowApplication      [0;39m [2m:[0;39m Starting ExceptionWorkflowApplication v0.0.1-SNAPSHOT using Java 24.0.2 with PID 52213 (/Users/praveennandyala/exception workflow/target/exception-workflow-0.0.1-SNAPSHOT.jar started by praveennandyala in /Users/praveennandyala/exception workflow)
+[2m2025-10-23T22:05:12.754-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.e.ExceptionWorkflowApplication      [0;39m [2m:[0;39m The following 1 profile is active: "local"
+[2m2025-10-23T22:05:16.308-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2025-10-23T22:05:16.678-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 333 ms. Found 11 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:nested:/Users/praveennandyala/exception workflow/target/exception-workflow-0.0.1-SNAPSHOT.jar/!BOOT-INF/lib/tomcat-embed-core-10.1.16.jar!/)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[2m2025-10-23T22:05:20.339-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port 8080 (http)
+[2m2025-10-23T22:05:20.365-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2025-10-23T22:05:20.366-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.apache.catalina.core.StandardEngine   [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/10.1.16]
+[2m2025-10-23T22:05:20.491-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2025-10-23T22:05:20.492-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mw.s.c.ServletWebServerApplicationContext[0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 7340 ms
+[2m2025-10-23T22:05:20.593-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2025-10-23T22:05:21.873-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+[2m2025-10-23T22:05:21.877-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2025-10-23T22:05:21.927-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.s.b.a.h2.H2ConsoleAutoConfiguration   [0;39m [2m:[0;39m H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+[2m2025-10-23T22:05:22.308-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+[2m2025-10-23T22:05:22.470-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate ORM core version 6.3.1.Final
+[2m2025-10-23T22:05:22.576-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.c.internal.RegionFactoryInitiator   [0;39m [2m:[0;39m HHH000026: Second-level cache disabled
+[2m2025-10-23T22:05:22.829-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.boot.internal.EnversServiceImpl   [0;39m [2m:[0;39m Envers integration enabled? : true
+[2m2025-10-23T22:05:23.258-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.s.o.j.p.SpringPersistenceUnitInfo     [0;39m [2m:[0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+[2m2025-10-23T22:05:23.379-04:00[0;39m [33m WARN[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.orm.deprecation           [0;39m [2m:[0;39m HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2m2025-10-23T22:05:24.233-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowActionHistory
+[2m2025-10-23T22:05:24.259-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.WorkflowActionHistory
+[2m2025-10-23T22:05:24.264-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.ExceptionWorkflow
+[2m2025-10-23T22:05:24.265-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.ExceptionWorkflow
+[2m2025-10-23T22:05:24.266-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowStep
+[2m2025-10-23T22:05:24.267-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.WorkflowStep
+[2m2025-10-23T22:05:24.268-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.SimpleExceptionWorkflow
+[2m2025-10-23T22:05:24.268-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.SimpleExceptionWorkflow
+[2m2025-10-23T22:05:24.269-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.EmailTemplate
+[2m2025-10-23T22:05:24.269-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.EmailTemplate
+[2m2025-10-23T22:05:24.273-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowDefinition
+[2m2025-10-23T22:05:24.274-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.WorkflowDefinition
+[2m2025-10-23T22:05:24.275-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating first-pass auditing mapping for entity com.example.exceptionworkflow.entity.ExceptionSlaTracker
+[2m2025-10-23T22:05:24.275-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Adding properties for entity: com.example.exceptionworkflow.entity.ExceptionSlaTracker
+[2m2025-10-23T22:05:24.277-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowActionHistory
+[2m2025-10-23T22:05:24.361-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.ExceptionWorkflow
+[2m2025-10-23T22:05:24.363-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowStep
+[2m2025-10-23T22:05:24.365-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.SimpleExceptionWorkflow
+[2m2025-10-23T22:05:24.366-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.EmailTemplate
+[2m2025-10-23T22:05:24.367-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.WorkflowDefinition
+[2m2025-10-23T22:05:24.370-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.c.i.m.AuditMetadataGenerator      [0;39m [2m:[0;39m Generating second-pass auditing mapping for entity com.example.exceptionworkflow.entity.ExceptionSlaTracker
+[2m2025-10-23T22:05:27.300-04:00[0;39m [31mERROR[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.metamodel.internal.MetadataContext  [0;39m [2m:[0;39m HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+[2m2025-10-23T22:05:27.336-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.h.e.t.j.p.i.JtaPlatformInitiator      [0;39m [2m:[0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2m2025-10-23T22:05:27.376-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists email_template cascade 
+Hibernate: 
+    drop table if exists email_template cascade 
+[2m2025-10-23T22:05:27.389-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists email_template_aud cascade 
+Hibernate: 
+    drop table if exists email_template_aud cascade 
+[2m2025-10-23T22:05:27.390-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists exception_access cascade 
+Hibernate: 
+    drop table if exists exception_access cascade 
+[2m2025-10-23T22:05:27.391-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists exception_sla_tracker cascade 
+Hibernate: 
+    drop table if exists exception_sla_tracker cascade 
+[2m2025-10-23T22:05:27.392-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists exception_sla_tracker_aud cascade 
+Hibernate: 
+    drop table if exists exception_sla_tracker_aud cascade 
+[2m2025-10-23T22:05:27.393-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists exception_workflow cascade 
+Hibernate: 
+    drop table if exists exception_workflow cascade 
+[2m2025-10-23T22:05:27.394-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists exception_workflow_aud cascade 
+Hibernate: 
+    drop table if exists exception_workflow_aud cascade 
+[2m2025-10-23T22:05:27.395-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists revinfo cascade 
+Hibernate: 
+    drop table if exists revinfo cascade 
+[2m2025-10-23T22:05:27.396-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_action_history cascade 
+Hibernate: 
+    drop table if exists workflow_action_history cascade 
+[2m2025-10-23T22:05:27.397-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_action_history_aud cascade 
+Hibernate: 
+    drop table if exists workflow_action_history_aud cascade 
+[2m2025-10-23T22:05:27.398-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_definition cascade 
+Hibernate: 
+    drop table if exists workflow_definition cascade 
+[2m2025-10-23T22:05:27.398-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_definition_aud cascade 
+Hibernate: 
+    drop table if exists workflow_definition_aud cascade 
+[2m2025-10-23T22:05:27.399-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_instance cascade 
+Hibernate: 
+    drop table if exists workflow_instance cascade 
+[2m2025-10-23T22:05:27.399-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_metadata cascade 
+Hibernate: 
+    drop table if exists workflow_metadata cascade 
+[2m2025-10-23T22:05:27.400-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_sla_config cascade 
+Hibernate: 
+    drop table if exists workflow_sla_config cascade 
+[2m2025-10-23T22:05:27.400-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_step cascade 
+Hibernate: 
+    drop table if exists workflow_step cascade 
+[2m2025-10-23T22:05:27.402-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    drop table if exists workflow_step_aud cascade 
+Hibernate: 
+    drop table if exists workflow_step_aud cascade 
+[2m2025-10-23T22:05:27.414-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table email_template (
+        template_id bigint generated by default as identity,
+        subject varchar(500),
+        body CLOB,
+        template_name varchar(255),
+        primary key (template_id)
+    )
+Hibernate: 
+    create table email_template (
+        template_id bigint generated by default as identity,
+        subject varchar(500),
+        body CLOB,
+        template_name varchar(255),
+        primary key (template_id)
+    )
+[2m2025-10-23T22:05:27.433-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table email_template_aud (
+        rev integer not null,
+        revtype tinyint,
+        template_id bigint not null,
+        subject varchar(500),
+        body CLOB,
+        template_name varchar(255),
+        primary key (rev, template_id)
+    )
+Hibernate: 
+    create table email_template_aud (
+        rev integer not null,
+        revtype tinyint,
+        template_id bigint not null,
+        subject varchar(500),
+        body CLOB,
+        template_name varchar(255),
+        primary key (rev, template_id)
+    )
+[2m2025-10-23T22:05:27.440-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table exception_access (
+        exception_access_id bigint generated by default as identity,
+        brid varchar(255),
+        business_area varchar(255),
+        product_area varchar(255),
+        role varchar(255),
+        primary key (exception_access_id)
+    )
+Hibernate: 
+    create table exception_access (
+        exception_access_id bigint generated by default as identity,
+        brid varchar(255),
+        business_area varchar(255),
+        product_area varchar(255),
+        role varchar(255),
+        primary key (exception_access_id)
+    )
+[2m2025-10-23T22:05:27.444-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table exception_sla_tracker (
+        reminder_count integer,
+        email_sent_on timestamp(6),
+        sla_id bigint,
+        tracker_id bigint generated by default as identity,
+        workflow_instance_id bigint,
+        status varchar(50),
+        exception_id varchar(250),
+        primary key (tracker_id)
+    )
+Hibernate: 
+    create table exception_sla_tracker (
+        reminder_count integer,
+        email_sent_on timestamp(6),
+        sla_id bigint,
+        tracker_id bigint generated by default as identity,
+        workflow_instance_id bigint,
+        status varchar(50),
+        exception_id varchar(250),
+        primary key (tracker_id)
+    )
+[2m2025-10-23T22:05:27.448-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table exception_sla_tracker_aud (
+        reminder_count integer,
+        rev integer not null,
+        revtype tinyint,
+        email_sent_on timestamp(6),
+        sla_id bigint,
+        tracker_id bigint not null,
+        workflow_instance_id bigint,
+        status varchar(50),
+        exception_id varchar(250),
+        primary key (rev, tracker_id)
+    )
+Hibernate: 
+    create table exception_sla_tracker_aud (
+        reminder_count integer,
+        rev integer not null,
+        revtype tinyint,
+        email_sent_on timestamp(6),
+        sla_id bigint,
+        tracker_id bigint not null,
+        workflow_instance_id bigint,
+        status varchar(50),
+        exception_id varchar(250),
+        primary key (rev, tracker_id)
+    )
+[2m2025-10-23T22:05:27.453-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table exception_workflow (
+        aging integer,
+        original_qty numeric(38,2),
+        tetb_quantity numeric(38,2),
+        reporting_ccy varchar(5),
+        as_of_time timestamp(6),
+        category_id bigint,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        instrument_id bigint,
+        position_qty bigint,
+        processed_on timestamp(6),
+        sds_book_code bigint,
+        esm_security_type varchar(50),
+        instrument_type varchar(50),
+        legal_entity varchar(50),
+        level_1 varchar(50),
+        level_2 varchar(50),
+        level_3 varchar(50),
+        level_4 varchar(50),
+        level_5 varchar(50),
+        level_6 varchar(50),
+        level_7 varchar(50),
+        look_through varchar(50),
+        status varchar(50),
+        system varchar(50),
+        bb_underlying varchar(250),
+        equity_class_type varchar(250),
+        exception_id varchar(250),
+        instrument_name varchar(250),
+        position_tbbb_classification varchar(250),
+        regulator varchar(250),
+        position_av varchar(1000),
+        sds_book_path varchar(1000),
+        sod_delta_bb_underlying varchar(1000),
+        tetb_av varchar(1000),
+        action_owner varchar(255),
+        reason CLOB,
+        source varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table exception_workflow (
+        aging integer,
+        original_qty numeric(38,2),
+        tetb_quantity numeric(38,2),
+        reporting_ccy varchar(5),
+        as_of_time timestamp(6),
+        category_id bigint,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        instrument_id bigint,
+        position_qty bigint,
+        processed_on timestamp(6),
+        sds_book_code bigint,
+        esm_security_type varchar(50),
+        instrument_type varchar(50),
+        legal_entity varchar(50),
+        level_1 varchar(50),
+        level_2 varchar(50),
+        level_3 varchar(50),
+        level_4 varchar(50),
+        level_5 varchar(50),
+        level_6 varchar(50),
+        level_7 varchar(50),
+        look_through varchar(50),
+        status varchar(50),
+        system varchar(50),
+        bb_underlying varchar(250),
+        equity_class_type varchar(250),
+        exception_id varchar(250),
+        instrument_name varchar(250),
+        position_tbbb_classification varchar(250),
+        regulator varchar(250),
+        position_av varchar(1000),
+        sds_book_path varchar(1000),
+        sod_delta_bb_underlying varchar(1000),
+        tetb_av varchar(1000),
+        action_owner varchar(255),
+        reason CLOB,
+        source varchar(255),
+        primary key (id)
+    )
+[2m2025-10-23T22:05:27.460-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table exception_workflow_aud (
+        aging integer,
+        original_qty numeric(38,2),
+        rev integer not null,
+        revtype tinyint,
+        tetb_quantity numeric(38,2),
+        reporting_ccy varchar(5),
+        as_of_time timestamp(6),
+        category_id bigint,
+        created_at timestamp(6),
+        id bigint not null,
+        instrument_id bigint,
+        position_qty bigint,
+        processed_on timestamp(6),
+        sds_book_code bigint,
+        esm_security_type varchar(50),
+        instrument_type varchar(50),
+        legal_entity varchar(50),
+        level_1 varchar(50),
+        level_2 varchar(50),
+        level_3 varchar(50),
+        level_4 varchar(50),
+        level_5 varchar(50),
+        level_6 varchar(50),
+        level_7 varchar(50),
+        look_through varchar(50),
+        status varchar(50),
+        system varchar(50),
+        bb_underlying varchar(250),
+        equity_class_type varchar(250),
+        exception_id varchar(250),
+        instrument_name varchar(250),
+        position_tbbb_classification varchar(250),
+        regulator varchar(250),
+        position_av varchar(1000),
+        sds_book_path varchar(1000),
+        sod_delta_bb_underlying varchar(1000),
+        tetb_av varchar(1000),
+        action_owner varchar(255),
+        reason CLOB,
+        source varchar(255),
+        primary key (rev, id)
+    )
+Hibernate: 
+    create table exception_workflow_aud (
+        aging integer,
+        original_qty numeric(38,2),
+        rev integer not null,
+        revtype tinyint,
+        tetb_quantity numeric(38,2),
+        reporting_ccy varchar(5),
+        as_of_time timestamp(6),
+        category_id bigint,
+        created_at timestamp(6),
+        id bigint not null,
+        instrument_id bigint,
+        position_qty bigint,
+        processed_on timestamp(6),
+        sds_book_code bigint,
+        esm_security_type varchar(50),
+        instrument_type varchar(50),
+        legal_entity varchar(50),
+        level_1 varchar(50),
+        level_2 varchar(50),
+        level_3 varchar(50),
+        level_4 varchar(50),
+        level_5 varchar(50),
+        level_6 varchar(50),
+        level_7 varchar(50),
+        look_through varchar(50),
+        status varchar(50),
+        system varchar(50),
+        bb_underlying varchar(250),
+        equity_class_type varchar(250),
+        exception_id varchar(250),
+        instrument_name varchar(250),
+        position_tbbb_classification varchar(250),
+        regulator varchar(250),
+        position_av varchar(1000),
+        sds_book_path varchar(1000),
+        sod_delta_bb_underlying varchar(1000),
+        tetb_av varchar(1000),
+        action_owner varchar(255),
+        reason CLOB,
+        source varchar(255),
+        primary key (rev, id)
+    )
+[2m2025-10-23T22:05:27.465-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table revinfo (
+        rev integer generated by default as identity,
+        revtstmp bigint,
+        primary key (rev)
+    )
+Hibernate: 
+    create table revinfo (
+        rev integer generated by default as identity,
+        revtstmp bigint,
+        primary key (rev)
+    )
+[2m2025-10-23T22:05:27.467-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_action_history (
+        action_id bigint generated by default as identity,
+        action_time timestamp(6),
+        instance_id bigint,
+        step_id bigint,
+        action_by varchar(50),
+        action_taken varchar(50),
+        comments CLOB,
+        primary key (action_id)
+    )
+Hibernate: 
+    create table workflow_action_history (
+        action_id bigint generated by default as identity,
+        action_time timestamp(6),
+        instance_id bigint,
+        step_id bigint,
+        action_by varchar(50),
+        action_taken varchar(50),
+        comments CLOB,
+        primary key (action_id)
+    )
+[2m2025-10-23T22:05:27.472-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_action_history_aud (
+        rev integer not null,
+        revtype tinyint,
+        action_id bigint not null,
+        action_time timestamp(6),
+        instance_id bigint,
+        step_id bigint,
+        action_by varchar(50),
+        action_taken varchar(50),
+        comments CLOB,
+        primary key (rev, action_id)
+    )
+Hibernate: 
+    create table workflow_action_history_aud (
+        rev integer not null,
+        revtype tinyint,
+        action_id bigint not null,
+        action_time timestamp(6),
+        instance_id bigint,
+        step_id bigint,
+        action_by varchar(50),
+        action_taken varchar(50),
+        comments CLOB,
+        primary key (rev, action_id)
+    )
+[2m2025-10-23T22:05:27.475-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_definition (
+        active_flag varchar(1),
+        workflow_id bigint generated by default as identity,
+        classification varchar(50),
+        workflow_name varchar(255),
+        primary key (workflow_id)
+    )
+Hibernate: 
+    create table workflow_definition (
+        active_flag varchar(1),
+        workflow_id bigint generated by default as identity,
+        classification varchar(50),
+        workflow_name varchar(255),
+        primary key (workflow_id)
+    )
+[2m2025-10-23T22:05:27.479-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_definition_aud (
+        active_flag varchar(1),
+        rev integer not null,
+        revtype tinyint,
+        workflow_id bigint not null,
+        classification varchar(50),
+        workflow_name varchar(255),
+        primary key (rev, workflow_id)
+    )
+Hibernate: 
+    create table workflow_definition_aud (
+        active_flag varchar(1),
+        rev integer not null,
+        revtype tinyint,
+        workflow_id bigint not null,
+        classification varchar(50),
+        workflow_name varchar(255),
+        primary key (rev, workflow_id)
+    )
+[2m2025-10-23T22:05:27.483-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_instance (
+        current_step_seq integer,
+        sla_hours integer,
+        email_sent_on timestamp(6),
+        email_template_id bigint,
+        instance_id bigint generated by default as identity,
+        last_updated timestamp(6),
+        workflow_id bigint not null,
+        active_step_flag varchar(255),
+        assigned_to_brid varchar(255),
+        comments varchar(255),
+        current_step varchar(255),
+        email_status varchar(255),
+        exception_id varchar(255) not null,
+        status varchar(255),
+        trigger_on varchar(255),
+        primary key (instance_id)
+    )
+Hibernate: 
+    create table workflow_instance (
+        current_step_seq integer,
+        sla_hours integer,
+        email_sent_on timestamp(6),
+        email_template_id bigint,
+        instance_id bigint generated by default as identity,
+        last_updated timestamp(6),
+        workflow_id bigint not null,
+        active_step_flag varchar(255),
+        assigned_to_brid varchar(255),
+        comments varchar(255),
+        current_step varchar(255),
+        email_status varchar(255),
+        exception_id varchar(255) not null,
+        status varchar(255),
+        trigger_on varchar(255),
+        primary key (instance_id)
+    )
+[2m2025-10-23T22:05:27.490-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_metadata (
+        workflow_id bigint not null,
+        actions_allowed varchar(255),
+        description varchar(255),
+        next_step_on_approve varchar(255),
+        next_step_on_reject varchar(255),
+        next_step_on_submit varchar(255),
+        role varchar(255),
+        step_code varchar(255) not null,
+        step_name varchar(255),
+        primary key (workflow_id, step_code)
+    )
+Hibernate: 
+    create table workflow_metadata (
+        workflow_id bigint not null,
+        actions_allowed varchar(255),
+        description varchar(255),
+        next_step_on_approve varchar(255),
+        next_step_on_reject varchar(255),
+        next_step_on_submit varchar(255),
+        role varchar(255),
+        step_code varchar(255) not null,
+        step_name varchar(255),
+        primary key (workflow_id, step_code)
+    )
+[2m2025-10-23T22:05:27.497-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_sla_config (
+        sla_hours integer,
+        email_template_id bigint,
+        workflow_id bigint not null,
+        step_code varchar(255) not null,
+        trigger_on varchar(255),
+        primary key (workflow_id, step_code)
+    )
+Hibernate: 
+    create table workflow_sla_config (
+        sla_hours integer,
+        email_template_id bigint,
+        workflow_id bigint not null,
+        step_code varchar(255) not null,
+        trigger_on varchar(255),
+        primary key (workflow_id, step_code)
+    )
+[2m2025-10-23T22:05:27.500-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_step (
+        is_final_step varchar(1),
+        step_order integer,
+        next_step_if_approved bigint,
+        next_step_if_rejected bigint,
+        sla_id bigint,
+        step_id bigint generated by default as identity,
+        workflow_id bigint,
+        role_code varchar(50),
+        actions_allowed varchar(255),
+        step_name varchar(255),
+        primary key (step_id)
+    )
+Hibernate: 
+    create table workflow_step (
+        is_final_step varchar(1),
+        step_order integer,
+        next_step_if_approved bigint,
+        next_step_if_rejected bigint,
+        sla_id bigint,
+        step_id bigint generated by default as identity,
+        workflow_id bigint,
+        role_code varchar(50),
+        actions_allowed varchar(255),
+        step_name varchar(255),
+        primary key (step_id)
+    )
+[2m2025-10-23T22:05:27.511-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    create table workflow_step_aud (
+        is_final_step varchar(1),
+        rev integer not null,
+        revtype tinyint,
+        step_order integer,
+        next_step_if_approved bigint,
+        next_step_if_rejected bigint,
+        sla_id bigint,
+        step_id bigint not null,
+        workflow_id bigint,
+        role_code varchar(50),
+        actions_allowed varchar(255),
+        step_name varchar(255),
+        primary key (rev, step_id)
+    )
+Hibernate: 
+    create table workflow_step_aud (
+        is_final_step varchar(1),
+        rev integer not null,
+        revtype tinyint,
+        step_order integer,
+        next_step_if_approved bigint,
+        next_step_if_rejected bigint,
+        sla_id bigint,
+        step_id bigint not null,
+        workflow_id bigint,
+        role_code varchar(50),
+        actions_allowed varchar(255),
+        step_name varchar(255),
+        primary key (rev, step_id)
+    )
+[2m2025-10-23T22:05:27.515-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists email_template_aud 
+       add constraint FKmeyyjhleu6sjea2igl9l92n4t 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists email_template_aud 
+       add constraint FKmeyyjhleu6sjea2igl9l92n4t 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.568-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists exception_sla_tracker_aud 
+       add constraint FKkrr8qpp8kwixo2t7is3o3ngbw 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists exception_sla_tracker_aud 
+       add constraint FKkrr8qpp8kwixo2t7is3o3ngbw 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.572-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists exception_workflow_aud 
+       add constraint FKf96rjcesrrvn4s09bi3gklk29 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists exception_workflow_aud 
+       add constraint FKf96rjcesrrvn4s09bi3gklk29 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.578-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists workflow_action_history_aud 
+       add constraint FKpd7cpm080q94p6ohwllv83r8r 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists workflow_action_history_aud 
+       add constraint FKpd7cpm080q94p6ohwllv83r8r 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.582-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists workflow_definition_aud 
+       add constraint FKi09x85kf6i1e1os666ajhorhh 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists workflow_definition_aud 
+       add constraint FKi09x85kf6i1e1os666ajhorhh 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.586-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    alter table if exists workflow_step_aud 
+       add constraint FKqm988dgrgwtkkb6eqf6ajiql6 
+       foreign key (rev) 
+       references revinfo
+Hibernate: 
+    alter table if exists workflow_step_aud 
+       add constraint FKqm988dgrgwtkkb6eqf6ajiql6 
+       foreign key (rev) 
+       references revinfo
+[2m2025-10-23T22:05:27.610-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2025-10-23T22:05:30.650-04:00[0;39m [33m WARN[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mJpaBaseConfiguration$JpaWebConfiguration[0;39m [2m:[0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2m2025-10-23T22:05:31.969-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port 8080 (http) with context path ''
+[2m2025-10-23T22:05:31.998-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[           main][0;39m [2m[0;39m[36mc.e.e.ExceptionWorkflowApplication      [0;39m [2m:[0;39m Started ExceptionWorkflowApplication in 21.586 seconds (process running for 24.586)
+[2m2025-10-23T22:05:35.912-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2025-10-23T22:05:35.912-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2025-10-23T22:05:35.914-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 1 ms
+[2m2025-10-23T22:05:36.241-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+[2m2025-10-23T22:05:36.427-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2m2025-10-23T22:05:36.447-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+[2m2025-10-23T22:05:36.449-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2m2025-10-23T22:05:36.453-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+[2m2025-10-23T22:05:36.458-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2m2025-10-23T22:05:36.461-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        (
+            wm1_0.step_code, wm1_0.workflow_id
+        ) in ((?, ?))
+[2m2025-10-23T22:05:36.464-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        workflow_metadata
+        (actions_allowed, description, next_step_on_approve, next_step_on_reject, next_step_on_submit, role, step_name, step_code, workflow_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2m2025-10-23T22:05:36.467-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+Hibernate: 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+[2m2025-10-23T22:05:36.480-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+[2m2025-10-23T22:05:36.493-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+Hibernate: 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+[2m2025-10-23T22:05:36.495-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+[2m2025-10-23T22:05:36.499-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+Hibernate: 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.exception_access_id=?
+[2m2025-10-23T22:05:36.500-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        exception_access
+        (brid, business_area, product_area, role, exception_access_id) 
+    values
+        (?, ?, ?, ?, default)
+[2m2025-10-23T22:05:41.109-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-2][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+[2m2025-10-23T22:05:44.910-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-4][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+[2m2025-10-23T22:05:48.312-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-6][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wi1_0.instance_id,
+        wi1_0.active_step_flag,
+        wi1_0.assigned_to_brid,
+        wi1_0.comments,
+        wi1_0.current_step,
+        wi1_0.current_step_seq,
+        wi1_0.email_sent_on,
+        wi1_0.email_status,
+        wi1_0.email_template_id,
+        wi1_0.exception_id,
+        wi1_0.last_updated,
+        wi1_0.sla_hours,
+        wi1_0.status,
+        wi1_0.trigger_on,
+        wi1_0.workflow_id 
+    from
+        workflow_instance wi1_0 
+    where
+        wi1_0.exception_id=?
+Hibernate: 
+    select
+        wi1_0.instance_id,
+        wi1_0.active_step_flag,
+        wi1_0.assigned_to_brid,
+        wi1_0.comments,
+        wi1_0.current_step,
+        wi1_0.current_step_seq,
+        wi1_0.email_sent_on,
+        wi1_0.email_status,
+        wi1_0.email_template_id,
+        wi1_0.exception_id,
+        wi1_0.last_updated,
+        wi1_0.sla_hours,
+        wi1_0.status,
+        wi1_0.trigger_on,
+        wi1_0.workflow_id 
+    from
+        workflow_instance wi1_0 
+    where
+        wi1_0.exception_id=?
+[2m2025-10-23T22:05:51.753-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-7][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=? 
+        and wm1_0.step_code=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=? 
+        and wm1_0.step_code=?
+[2m2025-10-23T22:05:51.761-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-7][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.role=?
+Hibernate: 
+    select
+        ea1_0.exception_access_id,
+        ea1_0.brid,
+        ea1_0.business_area,
+        ea1_0.product_area,
+        ea1_0.role 
+    from
+        exception_access ea1_0 
+    where
+        ea1_0.role=?
+[2m2025-10-23T22:05:51.771-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-7][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wsc1_0.step_code,
+        wsc1_0.workflow_id,
+        wsc1_0.email_template_id,
+        wsc1_0.sla_hours,
+        wsc1_0.trigger_on 
+    from
+        workflow_sla_config wsc1_0 
+    where
+        wsc1_0.workflow_id=? 
+        and wsc1_0.step_code=?
+Hibernate: 
+    select
+        wsc1_0.step_code,
+        wsc1_0.workflow_id,
+        wsc1_0.email_template_id,
+        wsc1_0.sla_hours,
+        wsc1_0.trigger_on 
+    from
+        workflow_sla_config wsc1_0 
+    where
+        wsc1_0.workflow_id=? 
+        and wsc1_0.step_code=?
+[2m2025-10-23T22:05:51.804-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-7][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    insert 
+    into
+        workflow_instance
+        (active_step_flag, assigned_to_brid, comments, current_step, current_step_seq, email_sent_on, email_status, email_template_id, exception_id, last_updated, sla_hours, status, trigger_on, workflow_id, instance_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        workflow_instance
+        (active_step_flag, assigned_to_brid, comments, current_step, current_step_seq, email_sent_on, email_status, email_template_id, exception_id, last_updated, sla_hours, status, trigger_on, workflow_id, instance_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Notification email sent for workflow instance: 1
+[2m2025-10-23T22:05:55.592-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-9][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wi1_0.instance_id,
+        wi1_0.active_step_flag,
+        wi1_0.assigned_to_brid,
+        wi1_0.comments,
+        wi1_0.current_step,
+        wi1_0.current_step_seq,
+        wi1_0.email_sent_on,
+        wi1_0.email_status,
+        wi1_0.email_template_id,
+        wi1_0.exception_id,
+        wi1_0.last_updated,
+        wi1_0.sla_hours,
+        wi1_0.status,
+        wi1_0.trigger_on,
+        wi1_0.workflow_id 
+    from
+        workflow_instance wi1_0 
+    where
+        wi1_0.exception_id=?
+Hibernate: 
+    select
+        wi1_0.instance_id,
+        wi1_0.active_step_flag,
+        wi1_0.assigned_to_brid,
+        wi1_0.comments,
+        wi1_0.current_step,
+        wi1_0.current_step_seq,
+        wi1_0.email_sent_on,
+        wi1_0.email_status,
+        wi1_0.email_template_id,
+        wi1_0.exception_id,
+        wi1_0.last_updated,
+        wi1_0.sla_hours,
+        wi1_0.status,
+        wi1_0.trigger_on,
+        wi1_0.workflow_id 
+    from
+        workflow_instance wi1_0 
+    where
+        wi1_0.exception_id=?
+[2m2025-10-23T22:05:55.599-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-9][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=? 
+        and wm1_0.step_code=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=? 
+        and wm1_0.step_code=?
+[2m2025-10-23T22:06:18.678-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-1][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+[2m2025-10-23T22:06:23.560-04:00[0;39m [32m INFO[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-5][0;39m [2m[0;39m[36mo.springdoc.api.AbstractOpenApiResource [0;39m [2m:[0;39m Init duration for springdoc-openapi is: 657 ms
+[2m2025-10-23T22:06:32.074-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-6][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+[2m2025-10-23T22:07:43.754-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-8][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+[2m2025-10-23T22:08:13.482-04:00[0;39m [32mDEBUG[0;39m [35m52213[0;39m [2m---[0;39m [2m[nio-8080-exec-4][0;39m [2m[0;39m[36morg.hibernate.SQL                       [0;39m [2m:[0;39m 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
+Hibernate: 
+    select
+        wm1_0.step_code,
+        wm1_0.workflow_id,
+        wm1_0.actions_allowed,
+        wm1_0.description,
+        wm1_0.next_step_on_approve,
+        wm1_0.next_step_on_reject,
+        wm1_0.next_step_on_submit,
+        wm1_0.role,
+        wm1_0.step_name 
+    from
+        workflow_metadata wm1_0 
+    where
+        wm1_0.workflow_id=?
